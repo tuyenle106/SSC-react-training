@@ -1,0 +1,12 @@
+declare module '~/api/*';
+declare module '~/assets/*';
+declare module '~/components/*';
+declare module '~/constants';
+declare module '~/contexts/*';
+declare module '~/hooks/*';
+declare module '~/pages/*';
+declare module '~/routes/*';
+declare module '~/routes';
+declare module '~/store/*';
+declare module '~/types/*';
+declare module '~/utils/*';
