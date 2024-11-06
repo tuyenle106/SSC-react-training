@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# React Base Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application template built with TypeScript, Vite, Redux Toolkit, and React Router.
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**src/**
+├── **api/** # API clients and services
+│ └── axiosClient.ts # Axios instance configuration
+│
+├── **components/**
+│ ├── **GlobalStyles/** # Global styles configuration
+│ ├── **layouts/** # Layout components
+│ │ ├── **DefaultLayout/** # Main layout structure
+│ │ └── **components/** # Header, Footer, Nav components
+│ └── **ui/** # Reusable UI components
+│
+├── **constants/** # Application constants
+│ ├── **index.ts** # Constants barrel file
+│ └── ...
+│
+├── **pages/** # Page components
+│ └── ...
+│
+├── **routes/** # Routing configuration
+│ └── **index.ts** # Route definitions
+│
+├── **store/** # Redux store setup
+│ ├── **slices/** # Redux slices
+│ │ └── ...
+│ └── **store.ts** # Store configuration
+│
+├── **types/** # TypeScript type definitions
+│ └── ...
+│
+├── **App.tsx** # Root component
+└── **main.tsx** # Application entry point
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- ⚡️ **Vite** - Lightning fast build tool
+- 🎯 **TypeScript** - Enhanced type safety and developer experience
+- 📦 **Redux Toolkit** - State management with Redux made easy
+- 🛣 **React Router** - Client-side routing
+- 🎨 **SCSS Modules** - Scoped styling with SCSS
+- 📏 **ESLint** - Code linting with TypeScript support
+- 🔍 **Path Aliases** - Import using `~` prefix
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository
+2. Install dependencies: `yarn install` / `npm install`
+3. Start the development server: `yarn dev` / `npm run dev`
