@@ -4,37 +4,37 @@ A modern React application template built with TypeScript, Vite, Redux Toolkit, 
 
 ## Structure
 
-**src/**
-├── **api/** # API clients and services
-│ └── axiosClient.ts # Axios instance configuration
-│
-├── **components/**
-│ ├── **GlobalStyles/** # Global styles configuration
-│ ├── **layouts/** # Layout components
-│ │ ├── **DefaultLayout/** # Main layout structure
-│ │ └── **components/** # Header, Footer, Nav components
-│ └── **ui/** # Reusable UI components
-│
-├── **constants/** # Application constants
-│ ├── **index.ts** # Constants barrel file
-│ └── ...
-│
-├── **pages/** # Page components
-│ └── ...
-│
-├── **routes/** # Routing configuration
-│ └── **index.ts** # Route definitions
-│
-├── **store/** # Redux store setup
-│ ├── **slices/** # Redux slices
-│ │ └── ...
-│ └── **store.ts** # Store configuration
-│
-├── **types/** # TypeScript type definitions
-│ └── ...
-│
-├── **App.tsx** # Root component
-└── **main.tsx** # Application entry point
+**src/**<br>
+├── **api/** # API clients and services<br>
+│ └── axiosClient.ts # Axios instance configuration<br>
+│<br>
+├── **components/**<br>
+│ ├── **GlobalStyles/** # Global styles configuration<br>
+│ ├── **layouts/** # Layout components<br>
+│ │ ├── **DefaultLayout/** # Main layout structure<br>
+│ │ └── **components/** # Header, Footer, Nav components<br>
+│ └── **ui/** # Reusable UI components<br>
+│<br>
+├── **constants/** # Application constants<br>
+│ ├── **index.ts** # Constants barrel file<br>
+│ └── ...<br>
+│<br>
+├── **pages/** # Page components<br>
+│ └── ...<br>
+│<br>
+├── **routes/** # Routing configuration<br>
+│ └── **index.ts** # Route definitions<br>
+│<br>
+├── **store/** # Redux store setup<br>
+│ ├── **slices/** # Redux slices<br>
+│ │ └── ...<br>
+│ └── **store.ts** # Store configuration<br>
+│<br>
+├── **types/** # TypeScript type definitions<br>
+│ └── ...<br>
+│<br>
+├── **App.tsx** # Root component<br>
+└── **main.tsx** # Application entry point<br>
 
 ## Features
 
