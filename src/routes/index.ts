@@ -2,7 +2,7 @@ import * as constants from '~/constants';
 
 import HomePage from '~/pages/Home';
 import ContactPage from '~/pages/Contact';
-import TODOPage from '~/pages/TODO';
+import TODOPage from '~/pages/Todo';
 
 type RouteItem = {
 	key: string;
