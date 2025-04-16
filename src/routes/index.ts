@@ -1,7 +1,8 @@
 import * as constants from '~/constants';
 
 import HomePage from '~/pages/Home';
-import Page2 from '~/pages/Page2';
+import ContactPage from '~/pages/Contact';
+import TODOPage from '~/pages/TODO';
 
 type RouteItem = {
 	key: string;
@@ -17,9 +18,14 @@ const routing: RouteItem[] = [
 		component: HomePage,
 	},
 	{
-		key: 'page2',
-		path: constants.PAGE_2,
-		component: Page2,
+		key: 'contact',
+		path: constants.CONTACT,
+		component: ContactPage,
+	},
+	{
+		key: 'todo',
+		path: constants.TODO,
+		component: TODOPage,
 	},
 ];
 

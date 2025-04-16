@@ -1,2 +1,3 @@
 export const HOME = '/';
-export const PAGE_2 = '/page2';
+export const CONTACT = '/contact';
+export const TODO = '/todo';
