@@ -1,54 +1,23 @@
-# React Base Project
+## 📌 Báo cáo tiến độ
 
-A modern React application template built with TypeScript, Vite, Redux Toolkit, and React Router.
+### Thứ Ba (15/04/2025) — Ngày 1 (theo guideline)
 
-## Structure
+- ✅ Học các kiến thức cơ bản:
+  - Git (khởi tạo repository, commit, push lên GitHub)
+  - HTML, CSS, JavaScript thuần
+- ✅ Thực hành:
+  - Code **portfolio cá nhân** bằng HTML, CSS, JavaScript
+  - Tạo repository và đẩy bài tập lên GitHub
 
-**src/**<br>
-├── **api/** # API clients and services<br>
-│ └── axiosClient.ts # Axios instance configuration<br>
-│<br>
-├── **components/**<br>
-│ ├── **GlobalStyles/** # Global styles configuration<br>
-│ ├── **layouts/** # Layout components<br>
-│ │ ├── **DefaultLayout/** # Main layout structure<br>
-│ │ └── **components/** # Header, Footer, Nav components<br>
-│ └── **ui/** # Reusable UI components<br>
-│<br>
-├── **constants/** # Application constants<br>
-│ ├── **index.ts** # Constants barrel file<br>
-│ └── ...<br>
-│<br>
-├── **pages/** # Page components<br>
-│ └── ...<br>
-│<br>
-├── **routes/** # Routing configuration<br>
-│ └── **index.ts** # Route definitions<br>
-│<br>
-├── **store/** # Redux store setup<br>
-│ ├── **slices/** # Redux slices<br>
-│ │ └── ...<br>
-│ └── **store.ts** # Store configuration<br>
-│<br>
-├── **types/** # TypeScript type definitions<br>
-│ └── ...<br>
-│<br>
-├── **App.tsx** # Root component<br>
-└── **main.tsx** # Application entry point<br>
+### Thứ Tư (16/04/2025) — Ngày 2 & 3 (theo guideline)
 
-## Features
-
-- ⚡️ **Vite** - Lightning fast build tool
-- 🎯 **TypeScript** - Enhanced type safety and developer experience
-- 📦 **Redux Toolkit** - State management with Redux made easy
-- 🛣 **React Router** - Client-side routing
-- 🎨 **SCSS Modules** - Scoped styling with SCSS
-- 📏 **ESLint** - Code linting with TypeScript support
-- 🔍 **Path Aliases** - Import using `~` prefix
-
-
-## Installation
-
-1. Clone the repository
-2. Install dependencies: `yarn install` / `npm install`
-3. Start the development server: `yarn dev` / `npm run dev`
+- ✅ Học các kiến thức cơ bản:
+  - ReactJS: cấu trúc component, JSX, props, state
+  - Tailwind CSS: cách sử dụng utility class để styling
+  - Hooks: `useState`, `useEffect`
+- ✅ Thực hành:
+  - Chuyển **portfolio** đã làm ở Ngày 1 sang dùng React (tách component rõ ràng)
+  - Styling lại bằng Tailwind CSS
+  - Làm bài tập Todo List:
+    - Thêm/xóa công việc
+    - Lưu danh sách vào `localStorage` để giữ lại sau khi refresh
