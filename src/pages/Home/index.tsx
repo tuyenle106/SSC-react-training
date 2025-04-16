@@ -7,7 +7,7 @@ import styles from "./Home.module.scss";
 import { RootState } from "../../store/store";
 
 // img
-import bg from "../../assets/img/bg.jpg";
+import bg from "~/assets/img/bg.jpg";
 const HomePage = () => {
   const dispatch = useDispatch();
   const count = useSelector((state: RootState) => state.app.count);
