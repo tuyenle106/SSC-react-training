@@ -2,7 +2,7 @@ import * as constants from '~/constants';
 
 import HomePage from '~/pages/Home';
 import ContactPage from '~/pages/Contact';
-import TODOPage from '~/pages/Todo';
+import TodoPage from '~/pages/Todo';
 
 type RouteItem = {
 	key: string;
@@ -25,7 +25,7 @@ const routing: RouteItem[] = [
 	{
 		key: 'todo',
 		path: constants.TODO,
-		component: TODOPage,
+		component: TodoPage,
 	},
 ];
 
