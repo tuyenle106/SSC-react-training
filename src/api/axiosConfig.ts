@@ -1,18 +1,7 @@
-// import axios from 'axios';
-
-// const axiosClient = axios.create({
-// 	baseURL: process.env.API_URL,
-// 	headers: {
-// 		'content-type': 'application/json',
-// 	},
-// });
-
-// export default axiosClient;
-
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL,
+  baseURL: import.meta.env.VITE_URL_BACKEND,
 	headers: {
 		'content-type': 'application/json',
 	},

@@ -39,6 +39,12 @@ function Header() {
           >
             Todo
           </Link>
+          <Link
+            to="/posts"
+            className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all duration-300"
+          >
+            Blog
+          </Link>
           <a
             href="#about"
             className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all duration-300"
@@ -80,6 +86,13 @@ function Header() {
             className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all"
           >
             Todo
+          </Link>
+          <Link
+            to="/posts"
+            onClick={closeMenu}
+            className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all"
+          >
+            Blog
           </Link>
           <a
             href="#about"

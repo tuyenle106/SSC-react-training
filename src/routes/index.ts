@@ -3,6 +3,9 @@ import * as constants from '~/constants';
 import HomePage from '~/pages/Home';
 import ContactPage from '~/pages/Contact';
 import TodoPage from '~/pages/Todo';
+import PostsPage from '~/pages/Posts';
+import PostDetailPage from '~/pages/PostDetail'; 
+import UserDetailPage from '~/pages/UserDetail';
 
 type RouteItem = {
 	key: string;
@@ -27,6 +30,21 @@ const routing: RouteItem[] = [
 		path: constants.TODO,
 		component: TodoPage,
 	},
+	{
+		key: 'posts',
+		path: constants.POSTS,
+		component: PostsPage,
+	},
+	{
+	key: 'post-detail',
+	path: constants.POST_DETAIL,
+	component: PostDetailPage,
+	},
+	{
+	key: 'user-detail',
+	path: constants.USER_DETAIL,
+	component: UserDetailPage,
+	}
 ];
 
 export default routing;
