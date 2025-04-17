@@ -1,16 +1,16 @@
-import { useDispatch, useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 
-import { increment, decrement } from "~/store/slices/appSlice";
-import Button from "~/components/ui/Button";
+// import { increment, decrement } from "~/store/slices/appSlice";
+// import Button from "~/components/ui/Button";
 
-import styles from "./Home.module.scss";
-import { RootState } from "../../store/store";
+// import styles from "./Home.module.scss";
+// import { RootState } from "../../store/store";
 
 // img
 import bg from "~/assets/img/bg.jpg";
 const HomePage = () => {
-  const dispatch = useDispatch();
-  const count = useSelector((state: RootState) => state.app.count);
+  // const dispatch = useDispatch();
+  // const count = useSelector((state: RootState) => state.app.count);
 
   return (
     // <div className={styles.wrapper}>
