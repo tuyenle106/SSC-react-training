@@ -45,6 +45,12 @@ function Header() {
           >
             Blog
           </Link>
+          <Link
+            to="/users"
+            className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all duration-300"
+          >
+            Users
+          </Link>
           <a
             href="#about"
             className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all duration-300"
@@ -94,6 +100,14 @@ function Header() {
           >
             Blog
           </Link>
+          <Link
+            to="/users"
+            onClick={closeMenu}
+            className="text-[#333] font-medium px-2 py-1 hover:bg-[#6c3bff] hover:text-white rounded transition-all"
+          >
+            Users
+          </Link>
+
           <a
             href="#about"
             onClick={closeMenu}

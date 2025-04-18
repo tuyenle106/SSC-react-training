@@ -62,7 +62,7 @@ const PostDetailPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen px-6 md:px-16 py-12 bg-gradient-to-r from-white to-blue-50">
+    <div className="min-h-screen px-6 md:px-16 py-12 bg-gradient-to-r from-[#f5f7fa] to-[#e4ecf7]">
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
         <Link to="/posts">
           <div className="text-blue-600 hover:underline text-sm mb-4 inline-block">

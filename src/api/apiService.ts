@@ -11,8 +11,7 @@ import axios from "./axiosClient";
 // };
 
 const getAllPosts = () => {
-  const URL_BACKEND = "/posts";
-  return axios.get(URL_BACKEND);
+  return axios.get("/posts");
 }
 
 const getPostById = (id: string | number) => {
@@ -23,4 +22,12 @@ const getCommentsByPostId = async (postId: string) => {
   return await axios.get(`/comments?postId=${postId}`);
 };
 
-export { getAllPosts, getPostById, getCommentsByPostId };
+const getAllUsers = () => {
+  return axios.get("/users");
+}
+
+const getUserById = (id: string | number) => {
+  return axios.get(`/users/${id}`);
+};
+
+export { getAllPosts, getPostById, getCommentsByPostId, getAllUsers, getUserById };
