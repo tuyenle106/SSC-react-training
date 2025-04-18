@@ -32,3 +32,11 @@
 - RESTful API & axios:
   - Đọc tài liệu về RESTful API, lập kế hoạch cho ứng dụng blog
   - Tạo giao diện và gắn API cho các trang: danh sách bài viết, xem chi tiết bài viết, hồ sơ người dùng, phần bình luận
+
+### Thứ Sáu (18/04/2025) - Ngày 7 (theo guideline)
+
+- Thêm các tính năng nâng cao:
+  - Chức năng tìm kiếm
+  - Lọc theo người dùng
+  - Phân trang
+  - Form tạo bài viết mới (giả lập các cuộc gọi API)
