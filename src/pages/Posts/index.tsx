@@ -9,6 +9,13 @@ interface Post {
   title: string;
   body: string;
 }
+
+interface NewPost {
+  title: string;
+  body: string;
+  userId: string;
+}
+
 const PostsPage: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [filteredPosts, setFilteredPosts] = useState<Post[]>([]);
@@ -20,7 +27,11 @@ const PostsPage: React.FC = () => {
 
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const [newPost, setNewPost] = useState({ title: "", body: "", userId: "" });
+  const [newPost, setNewPost] = useState<NewPost>({
+    title: "",
+    body: "",
+    userId: "",
+  });
 
   const POSTS_PER_PAGE = 6;
 
@@ -58,7 +69,7 @@ const PostsPage: React.FC = () => {
     }
 
     setFilteredPosts(result);
-    setCurrentPage(1); // Reset page when filtering
+    setCurrentPage(1);
   }, [searchTerm, selectedUser, posts]);
 
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
@@ -76,10 +87,7 @@ const PostsPage: React.FC = () => {
   }
 
   return (
-    <div
-      className="px-4 sm:px-8 lg:px-32 py-10 bg-gradient-to-r from-[#f5f7fa] to-[#e4ecf7]
-    min-h-screen"
-    >
+    <div className="px-4 sm:px-8 lg:px-32 py-10 bg-gradient-to-r from-[#f5f7fa] to-[#e4ecf7] min-h-screen">
       <h1 className="text-4xl font-bold mb-8 text-center drop-shadow-sm text-[#6c3bff]">
         Blog Posts
       </h1>
@@ -87,7 +95,6 @@ const PostsPage: React.FC = () => {
       {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
-        {/* Search Input */}
         <div className="relative w-full md:w-1/2">
           <input
             type="text"
@@ -101,7 +108,6 @@ const PostsPage: React.FC = () => {
           </div>
         </div>
 
-        {/* User Filter Dropdown */}
         <div className="w-full md:w-1/4">
           <select
             value={selectedUser}
@@ -152,10 +158,8 @@ const PostsPage: React.FC = () => {
         ))}
       </div>
 
-      {/* Pagination */}
       {totalPages > 1 && (
         <div className="flex justify-center mt-6 space-x-2">
-          {/* Previous Button */}
           <button
             onClick={() => currentPage > 1 && paginate(currentPage - 1)}
             disabled={currentPage === 1}
@@ -168,7 +172,6 @@ const PostsPage: React.FC = () => {
             Previous
           </button>
 
-          {/* Page Numbers */}
           {Array.from({ length: totalPages }, (_, i) => (
             <button
               key={i + 1}
@@ -183,7 +186,6 @@ const PostsPage: React.FC = () => {
             </button>
           ))}
 
-          {/* Next Button */}
           <button
             onClick={() =>
               currentPage < totalPages && paginate(currentPage + 1)
@@ -216,6 +218,7 @@ const PostsPage: React.FC = () => {
               }
               className="w-full mb-3 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
+
             <textarea
               placeholder="Body"
               value={newPost.body}
@@ -228,7 +231,7 @@ const PostsPage: React.FC = () => {
               placeholder="User ID"
               value={newPost.userId}
               onChange={(e) =>
-                setNewPost({ ...newPost, userId: parseInt(e.target.value) })
+                setNewPost({ ...newPost, userId: e.target.value })
               }
               className="w-full mb-3 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
@@ -243,12 +246,14 @@ const PostsPage: React.FC = () => {
               <button
                 onClick={() => {
                   const fakePost: Post = {
-                    ...newPost,
-                    id: Date.now(), // fake ID
+                    id: Date.now(),
+                    title: newPost.title,
+                    body: newPost.body,
+                    userId: Number(newPost.userId),
                   };
-                  setPosts([fakePost, ...posts]); // Add to the beginning of the list
+                  setPosts([fakePost, ...posts]);
                   setIsFormOpen(false);
-                  setNewPost({ title: "", body: "", userId: "" }); // Reset form
+                  setNewPost({ title: "", body: "", userId: "" });
                 }}
                 className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 cursor-pointer"
               >
